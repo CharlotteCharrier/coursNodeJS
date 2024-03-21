@@ -1,0 +1,13 @@
+<% projects.forEach((element) => { %>
+    <div class="col-lg-6">
+        <a class="portfolio-item" href="#!">
+            <div class="caption">
+                <div class="caption-content">
+                    <div class="h2"><%=element.card_title %></div>
+                    <p class="mb-0"><%=element.card_description %></p>
+                </div>
+            </div>
+            <img class="img-fluid" src="<%= element.card_img %>" alt="..." />
+        </a>
+    </div>
+<% }); %>

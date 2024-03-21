@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Stylish Portfolio - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../public/assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Simple line icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+        rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../public/css/styles.css">
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">NodeProject</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link <% if(currentPage === 'home') {%> active <% }%>" aria-current="page" href="/home">Accueil</a>
+                        <!-- un peu bizarre car je dois mettre la classe active en dehors des <>% mais remettre les {} dedans -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <% if(currentPage === 'formation') {%> active <% }%>" href="/formation">Formation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <% if(currentPage === 'entreprise') {%> active <% }%>" href="/entreprise">Entreprise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <% if(currentPage === 'profil') {%> active <% }%>" href="/profil">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <% if(currentPage === 'contact') {%> active <% }%>" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="masthead d-flex align-items-center">
+        <div class="container px-4 px-lg-5 text-center">
+            <!-- //sans les props on définit les variables en haut avec le <> et % (obligé de décomposer sinon ça interprète mes commentaires et ça me fait des erreurs) -->
+            <!-- <>% 
+            let title='Portfolio de Charlotte';
+            let subtitle='Mes projets réalisés en formation avec Simplon et la MAIF' 
+            %>> --> 
+                    <h1 class="mb-1">
+                        <%= title %>
+                    </h1>
+                    <h3 class="mb-5"><em>
+                        <%= subtitle %>
+                        </em></h3>
+                    <a class="btn btn-primary btn-xl" href="#about">En savoir plus</a>
+        </div>
+    </header>
